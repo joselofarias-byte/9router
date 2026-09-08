@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { CardSkeleton } from "@/shared/components";
-import { CLI_TOOLS, MITM_TOOLS } from "@/shared/constants/cliTools";
+import { CLI_TOOLS, MITM_TOOLS } from "@/shared/constants/cliToolsRegistry";
 import { MitmLinkCard } from "./components";
 import ToolSummaryCard from "./components/ToolSummaryCard";
 
