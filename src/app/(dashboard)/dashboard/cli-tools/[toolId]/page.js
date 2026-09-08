@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { CLI_TOOLS } from "@/shared/constants/cliTools";
+import { CLI_TOOLS } from "@/shared/constants/cliToolsRegistry";
 import { getMachineId } from "@/shared/utils/machine";
 import ToolDetailClient from "./ToolDetailClient";
 

@@ -3,11 +3,11 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { CardSkeleton } from "@/shared/components";
-import { CLI_TOOLS } from "@/shared/constants/cliTools";
+import { CLI_TOOLS } from "@/shared/constants/cliToolsRegistry";
 import { getModelsByProviderId, PROVIDER_ID_TO_ALIAS } from "@/shared/constants/models";
 import {
   ClaudeToolCard, CodexToolCard, DroidToolCard, OpenClawToolCard,
-  HermesToolCard, DefaultToolCard, OpenCodeToolCard, CoworkToolCard,
+  HermesToolCard, DefaultToolCard, OpenCodeToolCard, PiToolCard, CoworkToolCard,
   ClineToolCard, KiloToolCard, DeepSeekTuiToolCard,
   JcodeToolCard, GrokBuildToolCard,
 } from "../components";
@@ -148,6 +148,8 @@ export default function ToolDetailClient({ toolId, machineId }) {
         return <CodexToolCard {...commonProps} activeProviders={getActiveProviders()} cloudEnabled={cloudEnabled} />;
       case "opencode":
         return <OpenCodeToolCard {...commonProps} activeProviders={getActiveProviders()} cloudEnabled={cloudEnabled} />;
+      case "pi":
+        return <PiToolCard {...commonProps} activeProviders={getActiveProviders()} cloudEnabled={cloudEnabled} />;
       case "cowork":
         return <CoworkToolCard {...commonProps} activeProviders={getActiveProviders()} hasActiveProviders={hasActiveProviders} cloudEnabled={cloudEnabled} cloudUrl={CLOUD_URL} tunnelEnabled={tunnelEnabled} tunnelPublicUrl={tunnelPublicUrl} tailscaleEnabled={tailscaleEnabled} tailscaleUrl={tailscaleUrl} />;
       case "droid":
